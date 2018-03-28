@@ -1,0 +1,9 @@
+<%- (() => {
+  return list.map(file => `import ${file.name} from '${file.path}'`).join('\n')
+})() %>
+
+export default {
+<%= (() => {
+  return list.map(file => `  ${file.name},`).join('\n')
+  })() %>
+}

@@ -1,0 +1,5 @@
+export default {
+<%- (() => {
+  return list.map(file => `  ${file.name.toLowerCase()}: require('${file.path}'),`).join('\n')
+})() %>
+}
